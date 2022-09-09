@@ -1,0 +1,10 @@
+[package]
+name = "arctis-nova-mixer"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[dependencies.hidapi]
+version = "1.4.2"
+default-features = false
+features = ["linux-shared-hidraw"]

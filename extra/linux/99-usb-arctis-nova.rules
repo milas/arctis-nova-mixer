@@ -1,0 +1,5 @@
+# libusb
+# SUBSYSTEM=="usb", ATTR{idVendor}=="1038", ATTR{idProduct}=="2206", GROUP="audio", MODE="0660"
+
+# hidraw
+KERNEL=="hidraw*", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="2206", GROUP="audio", MODE="0660"
