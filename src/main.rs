@@ -1,3 +1,4 @@
+mod winmixer;
 use hidapi::HidApi;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -11,6 +12,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         })
         .ok_or("no headset found")?
         .open_device(&api)?;
+
+    unsafe {
+        winmixer::mixer()?;
+    }
 
     loop {
         let mut buf = [0, 0, 0];
