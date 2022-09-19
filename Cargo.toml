@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
 
+[dependencies]
+clap = { version = "3.2.22", features = ["derive"] }
+lazy_static = "1.4.0"
+
 [dependencies.hidapi]
 version = "1.4.2"
 default-features = false
